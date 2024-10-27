@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon.ico"
+      type="image/vnd.microsoft.icon"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <script src="lab4.js"></script>
+    <header>
+      <a href="index.html"><img src="images/logo.png" id="logo" /></a>
+      <img id="i1" src="TH_B2_Data/header-img1.png" />
+      <img id="i2" src="TH_B2_Data/header-img2.png" />
+      <img id="i3" src="TH_B2_Data/header-img3.png" />
+      <nav>
+        <a class="nava" href="index.html">Trang chủ</a>
+        <a class="nava" href="gioithieu.html">Giới Thiệu</a>
+        <a class="nava" href="sanpham.html">Sản Phẩm</a>
+        <a class="nava" href="tintuc.html">Tin Tức</a>
+        <a class="nava" href="dangnhap.html">Đăng nhập</a>
+        <a class="nava" href="dangky.html">Đăng ký</a>
+        <a class="nava" href="lienhe.html">Liên hệ</a><br />
+      </nav>
+      <form
+        class="search-area"
+        method="GET"
+        id="search-form"
+        action="timkiem.html"
+        onsubmit="return mySearch(event);"
+      >
+        <input
+          name="search"
+          type="search"
+          id="search"
+          placeholder="Nhập nội dung cần tìm..."
+        />
+        <button type="submit" class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        &nbsp;
+        <span onclick="window.location.href='donhang.html'" class="shoping-icon"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></span>
+      </form>
+    </header>
+    <main class="one-col">
+      <form
+        method="post"
+        enctype="application/x-www-form-urlencoded"
+        onsubmit="return frmDangNhap(this);"
+      >
+        <fieldset>
+          <legend><h1>Đăng Nhập</h1></legend>
+          <table>
+            <tr>
+              <td colspan="2">
+                <img src="images/dangnhap/userlogin.png" width="200px" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="email" class="form-icons"
+                  ><i class="fa fa-envelope"></i
+                ></label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Nhập Email"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="passwd" class="form-icons"
+                  ><i class="fa fa-key"></i
+                ></label>
+              </td>
+              <td>
+                <input
+                  type="password"
+                  name="psw"
+                  id="passwd"
+                  placeholder="Nhập mật khẩu"
+                  required
+                />
+              </td>
+            </tr>
+          </table>
+          <div>
+            Bạn quên <a href="">Mật Khẩu?</a>
+            <input type="checkbox" name="remember" checked />Ghi nhớ cho lần
+            đăng nhập sau <br /><br />
+            <input type="submit" value="Đăng Nhập" />
+            <input type="reset" value="Hủy" />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      &COPY;Bản quyền về FreezaVN.
+      <a class="ficon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="ficon" href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a class="ficon" href="#"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="#logo"><img src="TH_B2_Data/top.png" width="50px" /></a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đơn hàng</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon.ico"
+      type="image/vnd.microsoft.icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" src="lab4.js"></script>
+    <script>window.onload=function(){ showCart(); };</script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="images/logo.png" id="logo" /></a>
+      <img id="i1" src="TH_B2_Data/header-img1.png" />
+      <img id="i2" src="TH_B2_Data/header-img2.png" />
+      <img id="i3" src="TH_B2_Data/header-img3.png" />
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="tintuc.html">Tin Tức</a>
+        <a href="dangnhap.html">Đăng nhập</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="lienhe.html">Liên hệ</a><br />
+      </nav>
+      <form
+        class="search-area"
+        method="GET"
+        id="search-form"
+        action="timkiem.html"
+        onsubmit="return mySearch(event);"
+      >
+        <input
+          name="search"
+          type="search"
+          id="search"
+          placeholder="Nhập nội dung cần tìm..."
+        />
+        <button type="submit" class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        &nbsp;
+        <span onclick="window.location.href='donhang.html'" class="shoping-icon"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></span>
+    </header>
+    <main class="one-col">
+      <h1>Chi tiết đơn hàng</h1>
+      <table border id="cartDetail">
+        <thead>
+          <tr>
+            <th>Hình SP</th>
+            <th>Tên SP</th>
+            <th>Số lượng</th>
+            <th>Giá cả</th>
+            <th>Thành tiền</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr><td colspan="6" align="right">Tổng thành tiền (A) = <span id="bill_totalpretax"></span></td></tr>
+		      <tr><td colspan="6" align="right">Chiết Khấu (B) = <span id="bill_discount"></span></td></tr>
+		      <tr><td colspan="6" align="right">Thuế (C) = 10% x (A - B) = <span id="bill_tax"></span></td></tr>
+		      <tr><td colspan="6" align="right">Tổng đơn hàng = A - B + C = <span id="bill_total"></span></td></tr>
+		      <tr><td colspan="6" align="center"><button type="submit">Xác Nhận Đơn Hàng</button></td></tr>
+        </tfoot>
+      </table>
+    </main>
+    <footer>
+      &COPY;Bản quyền về FreezaVN.
+      <a class="ficon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="ficon" href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a class="ficon" href="#"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="#logo"><img src="TH_B2_Data/top.png" width="50px" /></a>
+    </footer>
+  </body>
+</html>
